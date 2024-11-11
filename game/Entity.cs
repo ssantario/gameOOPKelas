@@ -1,18 +1,21 @@
 namespace game
 {
-    abstract class Entity
+    public class Entity
     {
-        protected string name;
-        protected int health;
-        protected int attackPower;
+        public string name;
+        public int health;
+        public int attackPower;
 
-        protected Entity(string name, int health, int attackPower)
+        public Entity(string name, int health, int attackPower)
         {
             this.name = name;
             this.health = health;
             this.attackPower = attackPower;
         }
 
-        public abstract void Attack(Entity target);
+        public virtual void Attack(Entity target)
+        {
+            // Default attack behavior (if any)
+        }
     }
 }

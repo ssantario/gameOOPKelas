@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 
 namespace game
 {
-    public class ConsoleRPG
+    public class game
     {
         public static void Main(string[] args)
         {

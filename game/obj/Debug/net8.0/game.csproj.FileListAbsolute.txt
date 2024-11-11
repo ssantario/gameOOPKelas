@@ -1,0 +1,15 @@
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.AssemblyInfoInputs.cache
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.AssemblyInfo.cs
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.csproj.CoreCompileInputs.cache
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.sourcelink.json
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\bin\Debug\net8.0\game.exe
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\bin\Debug\net8.0\game.deps.json
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\bin\Debug\net8.0\game.runtimeconfig.json
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\bin\Debug\net8.0\game.dll
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\bin\Debug\net8.0\game.pdb
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.dll
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\refint\game.dll
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.pdb
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.genruntimeconfig.cache
+C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\ref\game.dll
