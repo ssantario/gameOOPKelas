@@ -13,3 +13,18 @@ C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\
 C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.pdb
 C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\game.genruntimeconfig.cache
 C:\Users\Rivi\OneDrive\Documents\kuliah\ARCHIVE SEMESTER\SEMESTER 3\PERKULIAHAN\OOP\Kelas\gameConsoleLine\game\obj\Debug\net8.0\ref\game.dll
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.AssemblyInfoInputs.cache
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.AssemblyInfo.cs
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.csproj.CoreCompileInputs.cache
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.sourcelink.json
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.dll
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\refint\game.dll
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.pdb
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\bin\Debug\net8.0\game.exe
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\bin\Debug\net8.0\game.deps.json
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\bin\Debug\net8.0\game.runtimeconfig.json
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\bin\Debug\net8.0\game.dll
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\bin\Debug\net8.0\game.pdb
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\game.genruntimeconfig.cache
+D:\Ngoding\Semester3\OOP Teori\Solluminaty\gameOOPKelas\game\obj\Debug\net8.0\ref\game.dll

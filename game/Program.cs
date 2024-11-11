@@ -2,7 +2,7 @@
 
 namespace game
 {
-    public class game
+    public class GameApp
     {
         public static void Main(string[] args)
         {
@@ -10,11 +10,28 @@ namespace game
 
             Character hero = Character.GetInstance("Hero", 100, 15);
             Enemy orcWarrior = EnemyFactory.CreateEnemy("Orc", "Warrior");
+            Enemy DragonWarior = EnemyFactory.CreateEnemy("Dragon", "Ice");
 
             hero.Attack(orcWarrior);
             orcWarrior.Attack(hero);
+            
             hero.Attack(orcWarrior);
             orcWarrior.Attack(hero);
+            
+            hero.Attack(orcWarrior);
+            orcWarrior.Attack(hero);
+
+            hero.Attack(orcWarrior);
+            orcWarrior.Attack(hero);
+            
+            hero.Attack(orcWarrior);
+            orcWarrior.Attack(hero);
+
+            hero.Attack(orcWarrior);
+            orcWarrior.Attack(hero);
+            
+            hero.Attack(orcWarrior);
+            DragonWarior.Attack(hero);
         }
 
         private static void ShowMainMenu()
@@ -26,7 +43,11 @@ namespace game
             _/  )) || || || || || || || || || || || || (( ||  ||   ||/   
             (_-_-   \\,/  \\ \\ \\/\\ \\ \\ \\ \\ \\ \\  \/\\  \\,  |/    
                                                                 (      
-                                                                    -_- ");
+                                                                    -_- 
+            !!!+++++++++++++++++++++ Game Start +++++++++++++++++++++!!!
+            
+            
+            ");
         }
     }
 }

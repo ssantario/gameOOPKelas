@@ -4,7 +4,12 @@ namespace game
 {
     class Enemy : Entity
     {
-        public Enemy(string name, int health, int attackPower) : base(name, health, attackPower) { }
+        public int expReward;
+
+        public Enemy(string name, int health, int attackPower, int expReward) : base(name, health, attackPower)
+        {
+            this.expReward = expReward;
+        }
 
         public override void Attack(Entity character)
         {
@@ -12,11 +17,11 @@ namespace game
             character.health -= attackPower;
             if (character.health <= 0)
             {
-                Console.WriteLine($"{character.name} has been defeated!");
+                Console.WriteLine($"{character.name} has been defeated!\n");
             }
             else
             {
-                Console.WriteLine($"{character.name} has {character.health} health remaining.");
+                Console.WriteLine($"{character.name} has {character.health} health remaining.\n");
             }
         }
     }

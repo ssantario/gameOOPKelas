@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\gameConsoleLine\\game\\game.csproj": {}
+    "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\gameConsoleLine\\game\\game.csproj": {
+    "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\gameConsoleLine\\game\\game.csproj",
+        "projectUniqueName": "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\game.csproj",
         "projectName": "game",
-        "projectPath": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\gameConsoleLine\\game\\game.csproj",
-        "packagesPath": "C:\\Users\\Rivi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\gameConsoleLine\\game\\obj\\",
+        "projectPath": "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\game.csproj",
+        "packagesPath": "C:\\Users\\nugro\\.nuget\\packages\\",
+        "outputPath": "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rivi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\nugro\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

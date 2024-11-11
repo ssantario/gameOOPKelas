@@ -1,21 +1,21 @@
-namespace game
-{
-    public class Entity
+    namespace game
     {
-        public string name;
-        public int health;
-        public int attackPower;
-
-        public Entity(string name, int health, int attackPower)
+        public class Entity
         {
-            this.name = name;
-            this.health = health;
-            this.attackPower = attackPower;
-        }
+            public string name;
+            public int health;
+            public int attackPower;
 
-        public virtual void Attack(Entity target)
-        {
-            // Default attack behavior (if any)
+            public Entity(string name, int health, int attackPower)
+            {
+                this.name = name;
+                this.health = health;
+                this.attackPower = attackPower;
+            }
+
+            public virtual void Attack(Entity target)
+            {
+                // Default attack behavior (if any)
+            }
         }
     }
-}
