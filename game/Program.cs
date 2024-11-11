@@ -10,28 +10,34 @@ namespace game
 
             Character hero = Character.GetInstance("Hero", 100, 15);
             Enemy orcWarrior = EnemyFactory.CreateEnemy("Orc", "Warrior");
-            Enemy DragonWarior = EnemyFactory.CreateEnemy("Dragon", "Ice");
+            Inventory inventory = new Inventory();
+            Item healthPotion = ItemsFactory.CreateItem("HealthPotion");
+            inventory.AddItem(healthPotion);
+            inventory.ShowInventory();
 
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
-            
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
-            
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
+            Enemy dragonWarrior = EnemyFactory.CreateEnemy("Dragon", "Ice");
 
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
-            
             hero.Attack(orcWarrior);
             orcWarrior.Attack(hero);
 
             hero.Attack(orcWarrior);
             orcWarrior.Attack(hero);
-            
+
             hero.Attack(orcWarrior);
-            DragonWarior.Attack(hero);
+            orcWarrior.Attack(hero);
+
+            hero.Attack(orcWarrior);
+            orcWarrior.Attack(hero);
+
+            hero.Attack(orcWarrior);
+            orcWarrior.Attack(hero);
+
+            inventory.UseItem("Health Potion", hero);
+            hero.Attack(orcWarrior);
+            orcWarrior.Attack(hero);
+
+            hero.Attack(orcWarrior);
+            dragonWarrior.Attack(hero);
         }
 
         private static void ShowMainMenu()
@@ -45,8 +51,6 @@ namespace game
                                                                 (      
                                                                     -_- 
             !!!+++++++++++++++++++++ Game Start +++++++++++++++++++++!!!
-            
-            
             ");
         }
     }

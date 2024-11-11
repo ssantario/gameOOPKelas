@@ -1,22 +1,18 @@
-using System;
-
 namespace game
 {
     public class Character : Entity
     {
-        private int level;
-        private int exp;
-        private int expToNextLevel;
-        private Inventory inventory;
-
         private static Character instance = null!;
+        public int Level { get; private set; }
+        public int Exp { get; private set; }
+        public int ExpToNextLevel { get; private set; }
 
-        private Character(string name, int health, int attackPower) : base(name, health, attackPower)
+        private Character(string name, int health, int attackPower)
+            : base(name, health, attackPower)
         {
-            this.level = 1;
-            this.exp = 0;
-            this.expToNextLevel = 100; // Initial EXP required for level up
-            this.inventory = new Inventory();
+            Level = 1;
+            Exp = 0;
+            ExpToNextLevel = 100;
         }
 
         public static Character GetInstance(string name, int health, int attackPower)
@@ -28,44 +24,57 @@ namespace game
             return instance;
         }
 
-        public override void Attack(Entity enemy)
+        public void Heal(int amount)
         {
-            Console.WriteLine($"{name} attacks {enemy.name} for {attackPower} damage.");
-            enemy.health -= attackPower;
-            if (enemy.health <= 0)
+            health += amount;
+            Console.WriteLine($"{name} healed by {amount}.");
+            Console.WriteLine($"{name} Current health: {health}");
+        }
+
+         public void TakeDamage(int damage)
+        {
+            health -= damage;
+            Console.WriteLine($"{name} takes {damage} damage.");
+            Console.WriteLine($"{name} health: {health}\n");
+        }
+
+        public void IncreaseDamage(double multiplier)
+        {
+            int AttackPower = (int)(attackPower * multiplier);
+            Console.WriteLine($"\n{name}'s attack increased to {AttackPower}.\n");
+        }
+
+        public override void Attack(Entity target)
+        {
+            if (target is Enemy enemy)
             {
-                Console.WriteLine($"{enemy.name} has been defeated!");
-                GainExp(((Enemy)enemy).expReward);
-            }
-            else
-            {
-                Console.WriteLine($"{enemy.name} has {enemy.health} health remaining.\n");
+                Console.WriteLine($"{name} attacks {enemy.name} for {attackPower} damage.");
+                enemy.TakeDamage(attackPower);
+                if (enemy.health <= 0)
+                {
+                    GainExp(enemy.ExpValue);
+                }
             }
         }
 
         private void GainExp(int amount)
         {
-            exp += amount;
-            Console.WriteLine($"{name} gained {amount} EXP.\n");
-            CheckLevelUp();
-        }
+            Exp += amount;
+            Console.WriteLine($"{name} gains {amount} exp. Current exp: {Exp}/{ExpToNextLevel}\n");
 
-        private void CheckLevelUp()
-        {
-            while (exp >= expToNextLevel)
+            if (Exp >= ExpToNextLevel)
             {
-                exp -= expToNextLevel;
                 LevelUp();
             }
         }
-
-        public void LevelUp()
+        private void LevelUp()
         {
-            level++;
-            health += 10;
-            attackPower += 5;
-            expToNextLevel += 50; // Increase the EXP required for the next level
-            Console.WriteLine($"\n!!!!===  {name} leveled up to level {level}  ===!!!!\n\n");
+            Level++;
+            Exp -= ExpToNextLevel;
+            ExpToNextLevel = (int)(ExpToNextLevel * 1.5); // Example formula for increasing exp needed
+            health += 20; // Example value for health increase
+            attackPower += 5; // Example value for attack power increase
+            Console.WriteLine($"{name} leveled up! Current level: {Level}, health: {health}, attack power: {attackPower}\n");
         }
     }
 }

@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace game
 {
     class Inventory
@@ -12,21 +15,21 @@ namespace game
         public void AddItem(Item item)
         {
             items.Add(item);
-            Console.WriteLine($"{item.Name} has been added to the inventory.");
+            Console.WriteLine($"\n{item.Name} has been added to the inventory.\n");
         }
 
         public void UseItem(string itemName, Character character)
         {
-            Item? item = items.Find(i => i.Name == itemName);
+            Item item = items.Find(i => i.Name == itemName);
             if (item != null)
             {
                 item.Use(character);
                 items.Remove(item);
-                Console.WriteLine($"{item.Name} has been used.");
+                Console.WriteLine($"\n{item.Name} has been used.\n");
             }
             else
             {
-                Console.WriteLine($"{itemName} not found in inventory.");
+                Console.WriteLine($"\n{itemName} not found in inventory.\n");
             }
         }
 
@@ -35,7 +38,7 @@ namespace game
             Console.WriteLine("Inventory:");
             foreach (var item in items)
             {
-                Console.WriteLine($"- {item.Name}");
+                Console.WriteLine($"- {item.Name}\n");
             }
         }
     }

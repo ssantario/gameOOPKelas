@@ -1,27 +1,27 @@
-using System;
-
 namespace game
 {
-    class Enemy : Entity
+    public class Enemy : Entity
     {
-        public int expReward;
-
-        public Enemy(string name, int health, int attackPower, int expReward) : base(name, health, attackPower)
+        public int ExpValue { get; }
+        public Enemy(string name, int health, int attackPower, int expValue)
+            : base(name, health, attackPower)
         {
-            this.expReward = expReward;
+            ExpValue = expValue;
         }
 
-        public override void Attack(Entity character)
+        public void TakeDamage(int damage)
         {
-            Console.WriteLine($"{name} attacks {character.name} for {attackPower} damage.");
-            character.health -= attackPower;
-            if (character.health <= 0)
+            health -= damage;
+            Console.WriteLine($"{name} takes {damage} damage.");
+            Console.WriteLine($"{name} health: {health}\n");
+        }
+
+        public override void Attack(Entity target)
+        {
+            if (target is Character character)
             {
-                Console.WriteLine($"{character.name} has been defeated!\n");
-            }
-            else
-            {
-                Console.WriteLine($"{character.name} has {character.health} health remaining.\n");
+                Console.WriteLine($"{name} attacks {character.name} for {attackPower} damage.");
+                character.TakeDamage(attackPower);
             }
         }
     }
