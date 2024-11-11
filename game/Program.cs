@@ -10,9 +10,15 @@ namespace game
 
             Character hero = Character.GetInstance("Hero", 100, 15);
             Enemy orcWarrior = EnemyFactory.CreateEnemy("Orc", "Warrior");
+            Inventory inventory = new Inventory();
+            Item healthPotion = ItemsFactory.CreateItem("HealthPotion");
+            inventory.AddItem(healthPotion);
+            inventory.ShowInventory();
 
             hero.Attack(orcWarrior);
             orcWarrior.Attack(hero);
+
+            inventory.UseItem("Health Potion", hero);
             hero.Attack(orcWarrior);
             orcWarrior.Attack(hero);
         }

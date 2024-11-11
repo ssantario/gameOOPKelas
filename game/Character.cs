@@ -2,48 +2,46 @@ using System;
 
 namespace game
 {
-    class Character : Entity
+    class Character
     {
-        private int level;
-        private Inventory inventory;
+        public string Name { get; }
+        public int Health { get; private set; }
+        public int Attack { get; private set; }
 
         private static Character instance;
 
-        private Character(string name, int health, int attackPower) : base(name, health, attackPower)
+        private Character(string name, int health, int attack)
         {
-            this.level = 1;
-            this.inventory = new Inventory();
+            Name = name;
+            Health = health;
+            Attack = attack;
         }
 
-        public static Character GetInstance(string name, int health, int attackPower)
+        public static Character GetInstance(string name, int health, int attack)
         {
             if (instance == null)
             {
-                instance = new Character(name, health, attackPower);
+                instance = new Character(name, health, attack);
             }
             return instance;
         }
 
-        public override void Attack(Entity enemy)
+        public void Heal(int amount)
         {
-            Console.WriteLine($"{name} attacks {enemy.name} for {attackPower} damage.");
-            enemy.health -= attackPower;
-            if (enemy.health <= 0)
-            {
-                Console.WriteLine($"{enemy.name} has been defeated!");
-            }
-            else
-            {
-                Console.WriteLine($"{enemy.name} has {enemy.health} health remaining.");
-            }
+            Health += amount;
+            Console.WriteLine($"{Name} healed by {amount}. Current health: {Health}");
         }
 
-        public void LevelUp()
+        public void IncreaseDamage(double multiplier)
         {
-            level++;
-            health += 10;
-            attackPower += 5;
-            Console.WriteLine($"{name} leveled up to level {level}!");
+            Attack = (int)(Attack * multiplier);
+            Console.WriteLine($"{Name}'s attack increased to {Attack}.");
+        }
+
+        public void AttackEnemy(Enemy enemy)
+        {
+            enemy.TakeDamage(Attack);
+            Console.WriteLine($"{Name} attacks {enemy.Name} for {Attack} damage.");
         }
     }
 }
