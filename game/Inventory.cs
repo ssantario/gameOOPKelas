@@ -15,7 +15,7 @@ namespace game
         public void AddItem(Item item)
         {
             items.Add(item);
-            Console.WriteLine($"\n{item.Name} has been added to the inventory.\n");
+            Console.WriteLine($"{item.Name} has been added to the inventory.");
         }
 
         public void UseItem(string itemName, Character character)
@@ -38,7 +38,7 @@ namespace game
             Console.WriteLine("Inventory:");
             foreach (var item in items)
             {
-                Console.WriteLine($"- {item.Name}\n");
+                Console.WriteLine($"- {item.Name}");
             }
         }
     }

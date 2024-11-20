@@ -7,6 +7,8 @@ namespace game
         public int Exp { get; private set; }
         public int ExpToNextLevel { get; private set; }
 
+        bool isDefending = false;
+
         private Character(string name, int health, int attackPower)
             : base(name, health, attackPower)
         {
@@ -31,8 +33,13 @@ namespace game
             Console.WriteLine($"{name} Current health: {health}");
         }
 
-         public void TakeDamage(int damage)
+        public void TakeDamage(int damage)
         {
+            if (isDefending)
+            {
+                damage = (int)(damage * 0.5);
+                isDefending = false;
+            }
             health -= damage;
             Console.WriteLine($"{name} takes {damage} damage.");
             Console.WriteLine($"{name} health: {health}\n");
@@ -76,5 +83,17 @@ namespace game
             attackPower += 5; // Example value for attack power increase
             Console.WriteLine($"{name} leveled up! Current level: {Level}, health: {health}, attack power: {attackPower}\n");
         }
+
+
+        public void Defend()
+        {
+            isDefending = true;
+        }
+
+        public void showStats()
+        {
+            Console.WriteLine($"\n{name} - Level: {Level}, Health: {health}, Attack Power: {attackPower}, Exp: {Exp}/{ExpToNextLevel}\n");
+        }
     }
 }
+

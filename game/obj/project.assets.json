@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\nugro\\.nuget\\packages\\": {}
+    "C:\\Users\\Rivi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\game.csproj",
+      "projectUniqueName": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\game.csproj",
       "projectName": "game",
-      "projectPath": "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\game.csproj",
-      "packagesPath": "C:\\Users\\nugro\\.nuget\\packages\\",
-      "outputPath": "D:\\Ngoding\\Semester3\\OOP Teori\\Solluminaty\\gameOOPKelas\\game\\obj\\",
+      "projectPath": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\game.csproj",
+      "packagesPath": "C:\\Users\\Rivi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nugro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Rivi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

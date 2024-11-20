@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace game
 {
@@ -9,35 +10,78 @@ namespace game
             ShowMainMenu();
 
             Character hero = Character.GetInstance("Hero", 100, 15);
+            Enemy goblin = EnemyFactory.CreateEnemy("Goblin", "");
             Enemy orcWarrior = EnemyFactory.CreateEnemy("Orc", "Warrior");
+            Enemy finalBoss = EnemyFactory.CreateEnemy("Dragon", "Ice");
+
             Inventory inventory = new Inventory();
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+
             Item healthPotion = ItemsFactory.CreateItem("HealthPotion");
+            Item damagePotion = ItemsFactory.CreateItem("DamagePotion");
             inventory.AddItem(healthPotion);
+            inventory.AddItem(damagePotion);
             inventory.ShowInventory();
+            hero.showStats();
 
-            Enemy dragonWarrior = EnemyFactory.CreateEnemy("Dragon", "Ice");
+            PlayLevel(hero, goblin, inventory, "Level 1: Fight the Goblin!");
+            if (hero.health > 0)
+            {
+                PlayLevel(hero, orcWarrior, inventory, "Level 2: Fight the Orc Warrior!");
+            }
+            if (hero.health > 0)
+            {
+                PlayLevel(hero, finalBoss, inventory, "Final Level: Fight the Dragon!");
+            }
 
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
+            if (hero.health > 0)
+            {
+                Console.WriteLine("Congratulations! You have defeated all the enemies!");
+            }
+            else
+            {
+                Console.WriteLine("Game Over. You have been defeated.");
+            }
+        }
 
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
+        private static void PlayLevel(Character hero, Enemy enemy, Inventory inventory, string levelMessage)
+        {
+            Console.WriteLine(levelMessage);
+            while (hero.health > 0 && enemy.health > 0)
+            {
+                Console.WriteLine("Choose an action:");
+                Console.WriteLine("1. Attack");
+                Console.WriteLine("2. Defend");
+                Console.WriteLine("3. Use item");
+                Console.Write("Enter choice: ");
+                string choice = Console.ReadLine();
 
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
+                switch (choice)
+                {
+                    case "1":
+                        hero.Attack(enemy);
+                        break;
+                    case "2":
+                        hero.Defend();
+                        break;
+                    case "3":
+                        inventory.ShowInventory();
+                        Console.Write("Enter item name: ");
+                        string itemName = Console.ReadLine();
+                        inventory.UseItem(itemName, hero);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice.");
+                        break;
+                }
 
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
-
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
-
-            inventory.UseItem("Health Potion", hero);
-            hero.Attack(orcWarrior);
-            orcWarrior.Attack(hero);
-
-            hero.Attack(orcWarrior);
-            dragonWarrior.Attack(hero);
+                if (enemy.health > 0)
+                {
+                    enemy.Attack(hero);
+                }
+            }
         }
 
         private static void ShowMainMenu()
@@ -50,8 +94,7 @@ namespace game
             (_-_-   \\,/  \\ \\ \\/\\ \\ \\ \\ \\ \\ \\  \/\\  \\,  |/    
                                                                 (      
                                                                     -_- 
-            !!!+++++++++++++++++++++ Game Start +++++++++++++++++++++!!!
-            ");
+            !!!+++++++++++++++++++++ Game Start +++++++++++++++++++++!!!");
         }
     }
 }
