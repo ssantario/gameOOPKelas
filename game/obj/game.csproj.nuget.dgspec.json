@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\game.csproj": {}
+    "C:\\Users\\DELL\\Documents\\Object Oriented Programming (ENCE603010)\\gameOOPKelas\\game\\game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\game.csproj": {
+    "C:\\Users\\DELL\\Documents\\Object Oriented Programming (ENCE603010)\\gameOOPKelas\\game\\game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\game.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\Object Oriented Programming (ENCE603010)\\gameOOPKelas\\game\\game.csproj",
         "projectName": "game",
-        "projectPath": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\game.csproj",
-        "packagesPath": "C:\\Users\\Rivi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rivi\\OneDrive\\Documents\\kuliah\\ARCHIVE SEMESTER\\SEMESTER 3\\PERKULIAHAN\\OOP\\Kelas\\aa\\gameOOPKelas\\game\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Documents\\Object Oriented Programming (ENCE603010)\\gameOOPKelas\\game\\game.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\Object Oriented Programming (ENCE603010)\\gameOOPKelas\\game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rivi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

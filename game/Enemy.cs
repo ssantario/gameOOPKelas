@@ -12,6 +12,12 @@ namespace game
         public void TakeDamage(int damage)
         {
             health -= damage;
+            
+            if (health < 0)
+            {
+                health = 0;
+            }
+            
             Console.WriteLine($"{name} takes {damage} damage.");
             Console.WriteLine($"{name} health: {health}\n");
         }

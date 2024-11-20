@@ -25,17 +25,17 @@ namespace game
             {
                 item.Use(character);
                 items.Remove(item);
-                Console.WriteLine($"\n{item.Name} has been used.\n");
+                Console.WriteLine($"\n{item.Name} has been used.");
             }
             else
             {
-                Console.WriteLine($"\n{itemName} not found in inventory.\n");
+                Console.WriteLine($"\n[!] {itemName} not found in inventory.");
             }
         }
 
         public void ShowInventory()
         {
-            Console.WriteLine("Inventory:");
+            Console.WriteLine("==Player's Inventory==\n\nAvailable Inventory Items:");
             foreach (var item in items)
             {
                 Console.WriteLine($"- {item.Name}");

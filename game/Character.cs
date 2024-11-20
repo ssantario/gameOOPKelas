@@ -29,8 +29,8 @@ namespace game
         public void Heal(int amount)
         {
             health += amount;
-            Console.WriteLine($"{name} healed by {amount}.");
-            Console.WriteLine($"{name} Current health: {health}");
+            Console.WriteLine($"\n{name} healed by {amount}.");
+            Console.WriteLine($"\n{name} Current health: {health}");
         }
 
         public void TakeDamage(int damage)
@@ -41,6 +41,12 @@ namespace game
                 isDefending = false;
             }
             health -= damage;
+
+            if (health < 0)
+            {
+                health = 0;
+            }
+            
             Console.WriteLine($"{name} takes {damage} damage.");
             Console.WriteLine($"{name} health: {health}\n");
         }
@@ -78,9 +84,9 @@ namespace game
         {
             Level++;
             Exp -= ExpToNextLevel;
-            ExpToNextLevel = (int)(ExpToNextLevel * 1.5); // Example formula for increasing exp needed
-            health += 20; // Example value for health increase
-            attackPower += 5; // Example value for attack power increase
+            ExpToNextLevel = (int)(ExpToNextLevel * 1.5); 
+            health += 20; 
+            attackPower += 5; 
             Console.WriteLine($"{name} leveled up! Current level: {Level}, health: {health}, attack power: {attackPower}\n");
         }
 

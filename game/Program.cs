@@ -26,14 +26,14 @@ namespace game
             inventory.ShowInventory();
             hero.showStats();
 
-            PlayLevel(hero, goblin, inventory, "Level 1: Fight the Goblin!");
+            PlayLevel(hero, goblin, inventory, "[Level 1]: Fight the Goblin!\n");
             if (hero.health > 0)
             {
-                PlayLevel(hero, orcWarrior, inventory, "Level 2: Fight the Orc Warrior!");
+                PlayLevel(hero, orcWarrior, inventory, "[Level 2]: Fight the Orc Warrior!\n");
             }
             if (hero.health > 0)
             {
-                PlayLevel(hero, finalBoss, inventory, "Final Level: Fight the Dragon!");
+                PlayLevel(hero, finalBoss, inventory, "[Final Level]: Fight the Dragon!\n");
             }
 
             if (hero.health > 0)
@@ -48,7 +48,10 @@ namespace game
 
         private static void PlayLevel(Character hero, Enemy enemy, Inventory inventory, string levelMessage)
         {
+            Console.Clear();
+            ShowMainMenu();
             Console.WriteLine(levelMessage);
+
             while (hero.health > 0 && enemy.health > 0)
             {
                 Console.WriteLine("Choose an action:");
@@ -58,12 +61,18 @@ namespace game
                 Console.Write("Enter choice: ");
                 string choice = Console.ReadLine();
 
+                Console.Clear();
+                ShowMainMenu();
+                Console.WriteLine(levelMessage);
+
                 switch (choice)
                 {
                     case "1":
+                        Console.WriteLine("==Battle Zone==\n");
                         hero.Attack(enemy);
                         break;
                     case "2":
+                        Console.WriteLine("==Battle Zone==\n");
                         hero.Defend();
                         break;
                     case "3":
@@ -72,16 +81,28 @@ namespace game
                         string itemName = Console.ReadLine();
                         inventory.UseItem(itemName, hero);
                         hero.showStats();
+                        Console.WriteLine("Press any key to continue...");
+                        Console.ReadKey();
+                        Console.Clear();
+                        ShowMainMenu();
+                        Console.WriteLine(levelMessage);
+                        Console.WriteLine("==Battle Zone==\n");
                         break;
                     default:
-                        Console.WriteLine("Invalid choice.");
-                        break;
+                        Console.WriteLine("[!] Invalid choice.\n");
+                        continue;
                 }
 
                 if (enemy.health > 0)
                 {
                     enemy.Attack(hero);
                 }
+
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                Console.Clear();
+                ShowMainMenu();
+                Console.WriteLine(levelMessage);
             }
         }
 
