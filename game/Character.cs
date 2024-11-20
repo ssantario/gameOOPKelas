@@ -47,8 +47,8 @@ namespace game
 
         public void IncreaseDamage(double multiplier)
         {
-            int AttackPower = (int)(attackPower * multiplier);
-            Console.WriteLine($"\n{name}'s attack increased to {AttackPower}.\n");
+            attackPower = (int)(attackPower * multiplier);
+            Console.WriteLine($"\n{name}'s attack increased to {attackPower}.\n");
         }
 
         public override void Attack(Entity target)

@@ -71,6 +71,7 @@ namespace game
                         Console.Write("Enter item name: ");
                         string itemName = Console.ReadLine();
                         inventory.UseItem(itemName, hero);
+                        hero.showStats();
                         break;
                     default:
                         Console.WriteLine("Invalid choice.");
